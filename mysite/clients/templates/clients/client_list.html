@@ -3,20 +3,20 @@
 {% load static %}
 
 {% block javascript %}
-  <script src="{% static 'books/js/books.js' %}"></script>
+  <script src="{% static 'clients/js/clients.js' %}"></script>
 {% endblock %}
 
 {% block content %}
   <h1 class="page-header">Clients</h1>
 
   <p>
-    <button type="button" class="btn btn-primary js-create-book" data-url="{% url 'book_create' %}">
+    <button type="button" class="btn btn-primary js-create-client" data-url="{% url 'client_create' %}">
       <span class="glyphicon glyphicon-plus"></span>
       New client
     </button>
   </p>
 
-  <table class="table" id="book-table">
+  <table class="table" id="client-table">
     <thead>
       <tr>
         <th>#</th>
@@ -30,11 +30,11 @@
       </tr>
     </thead>
     <tbody>
-      {% include 'books/includes/partial_book_list.html' %}
+      {% include 'clients/includes/partial_client_list.html' %}
     </tbody>
   </table>
 
-  <div class="modal fade" id="modal-book">
+  <div class="modal fade" id="modal-client">
     <div class="modal-dialog">
       <div class="modal-content">
 

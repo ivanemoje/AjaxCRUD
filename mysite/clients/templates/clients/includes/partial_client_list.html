@@ -1,0 +1,27 @@
+{% for client in clients %}
+  <tr>
+    <td>{{ client.id }}</td>
+    <td>{{ client.name }}</td>
+    <td>{{ client.account_manager }}</td>
+    <td>{{ client.get_service_type_display }}</td>
+    <td>{{ client.installation_date }}</td>
+    <td>{{ client.capacity }}</td>
+    <td>{{ client.monthly_charge }}</td>
+    <td style="width: 150px">
+      <button type="button"
+              class="btn btn-warning btn-sm js-update-client"
+              data-url="{% url 'client_update' client.id %}">
+        <span class="glyphicon glyphicon-pencil"></span> Edit
+      </button>
+      <button type="button"
+              class="btn btn-danger btn-sm js-delete-client"
+              data-url="{% url 'client_delete' client.id %}">
+        <span class="glyphicon glyphicon-trash"></span> Delete
+      </button>
+    </td>
+  </tr>
+{% empty %}
+  <tr>
+    <td colspan="8" class="text-center bg-warning">No client</td>
+  </tr>
+{% endfor %}

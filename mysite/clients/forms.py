@@ -1,9 +1,9 @@
 from django import forms
 
-from .models import Book
+from .models import Client
 
 
-class BookForm(forms.ModelForm):
+class ClientForm(forms.ModelForm):
     class Meta:
-        model = Book
+        model = Client
         fields = ('name', 'installation_date', 'account_manager', 'monthly_charge', 'capacity', 'service_type', )

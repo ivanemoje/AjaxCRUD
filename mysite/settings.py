@@ -39,7 +39,7 @@ INSTALLED_APPS = [
 
     'widget_tweaks',
 
-    'mysite.books',
+    'mysite.clients',
 ]
 
 MIDDLEWARE = [
